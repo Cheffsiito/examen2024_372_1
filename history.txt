@@ -1,0 +1,26 @@
+    1  cd examen372
+    2  touch create.sh
+    3  echo '#! /bin/bash' >> create.sh
+    4  rm -rf webapp
+    5  mkdir -p webapp/{css,js,docs/{text,python},img}
+    6  cd webapp
+    7  for file in index.html style.css app.js main.py; do     touch ./"${file}"; done
+    8  cmd //c tree //F ./
+    9  curl -o meme.jpg "https://pm1.aminoapps.com/7021/417429318f6b29b6bc737fb95ba1ddafc9ba2decr1-720-642v2_hq.jpg"
+   10  read -p "Introduce la cantidad de archivos a crear:" numfiles
+   11  for x in $( seq 1 $numfiles ); do     echo "Archivo ${x}" > "file${x}.txt"; done
+   12  "cmd //c tree //F ./"
+   13  cmd //c tree //F ./
+   14  mv webapp/style.css webapp/css
+   15  mv style.css css
+   16  mv file?.txt docs/text
+   17  mv file??.txt docs/text
+   18  mv main.py docs/python
+   19  mv app.js js
+   20  cmd //c tree //F ./
+   21  ./create.sh
+   22  ./create.sh
+   23  cd create.sh
+   24  cd ../..
+   25  mv examen372.md README.md
+   26  history > history.txt
